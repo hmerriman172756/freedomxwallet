@@ -1,46 +1,45 @@
-/* General setup */
+/* Global styling */
 body {
   margin: 0;
-  padding: 0;
   font-family: 'Orbitron', sans-serif;
   background-color: #0d0d0d;
   color: #ffffff;
   overflow-x: hidden;
 }
 
-/* Header and logo */
+/* Header and logo styling */
 header {
   position: fixed;
   top: 0;
   width: 100%;
   padding: 20px 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
   text-align: center;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(6px);
   z-index: 1000;
 }
 
 .logo {
-  max-height: 70px;
+  max-height: 120px;
   width: auto;
+  object-fit: contain;
   transition: transform 0.3s ease;
 }
 
 .logo:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
-/* Hero section with animated background */
+/* Hero section with animated gradient */
 .hero {
-  position: relative;
   height: 100vh;
-  padding-top: 120px; /* to avoid overlap with fixed header */
   background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #0d0d0d);
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 150px; /* space for fixed header */
   text-align: center;
 }
 
@@ -56,7 +55,7 @@ header {
   }
 }
 
-/* Hero content */
+/* Hero content styling */
 .hero-content {
   max-width: 800px;
   padding: 0 20px;
@@ -65,6 +64,7 @@ header {
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 20px;
+  color: #00f0ff;
 }
 
 .hero p {
