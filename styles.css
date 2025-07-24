@@ -1,18 +1,73 @@
-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px 40px;
-  z-index: 10;
-  display: flex;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.4); /* Optional: adds slight translucent background */
-  backdrop-filter: blur(6px);     /* Optional: for futuristic glass effect */
+/* General setup */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #0d0d0d;
+  color: #ffffff;
+  overflow-x: hidden;
 }
 
-header img {
-  max-height: 80px;
+/* Header and logo */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+}
+
+.logo {
+  max-height: 70px;
   width: auto;
-  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* Hero section with animated background */
+.hero {
+  position: relative;
+  height: 100vh;
+  padding-top: 120px; /* to avoid overlap with fixed header */
+  background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #0d0d0d);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Hero content */
+.hero-content {
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #ccc;
 }
