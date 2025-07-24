@@ -1,28 +1,33 @@
-.overlay {
-position: absolute;
-width: 100%;
-height: 100%;
-background: radial-gradient(circle at center, #00f2fe22, #4facfe11, transparent);
-z-index: 1;
-mix-blend-mode: overlay;
+/* Futuristic Web3 background and body setup */
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #0d0d0d;
+  color: #ffffff;
+  overflow-x: hidden;
 }
 
+/* ANIMATED BACKGROUND */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #0d0d0d);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-@keyframes gridmove {
-  from {
-    background-position: 0 0, 0 0;
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
   }
-  to {
-    background-position: 120px 60px, 120px 60px;
+  50% {
+    background-position: 100% 50%;
   }
-}
-
-.overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at center, #00f2fe15, #4facfe05, transparent);
-  z-index: 1;
-  mix-blend-mode: overlay;
+  100% {
+    background-position: 0% 50%;
+  }
 }
